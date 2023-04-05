@@ -1,0 +1,32 @@
+
+#header {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(180, 179, 179);
+  color: rgb(0, 0, 0);
+}
+
+.profile {
+  display: flexbox;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.text {
+  color: white;
+  margin-top: 50px;
+  font-size: larger;
+
+}
+
+.resume{
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
