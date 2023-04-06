@@ -2,10 +2,17 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { useState } from "react";
 
 function CollapsibleExample() {
+  const [count, setCount] = useState(0);
+
+  function handleIncrement() {
+    setCount(count + 1);
+  }
+
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar sticky="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand href="#home">Brian Crisp</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -20,7 +27,20 @@ function CollapsibleExample() {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">Leave a like</Nav.Link>
+            <button
+              onClick={() => {
+                handleIncrement();
+              }}
+              id="add-likes"
+              className="btn btn-primary"
+            >
+              Leave a like
+            </button>
+          </Nav>
+          <Nav className="likes-count">
+            <div>
+              {count} {count === 1 ? "Like" : "Likes"}
+            </div>
           </Nav>
         </Navbar.Collapse>
       </Container>

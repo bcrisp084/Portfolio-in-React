@@ -1,22 +1,12 @@
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import CardExample from "./MainContent";
+import CardExample from "./Card";
+import Image from "./Image";
 
-function ContainerFluidExample() {
+function ContainerFluidExample(props) {
   return (
     <Container id="main-container" fluid>
-      <Row>
-        <Col>
-          <CardExample />
-        </Col>
-        <Col>
-          <CardExample />
-        </Col>
-        <Col>
-          <CardExample />
-        </Col>
-      </Row>
+      {props.children}
     </Container>
   );
 }
