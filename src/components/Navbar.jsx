@@ -3,10 +3,12 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 function CollapsibleExample() {
   const [count, setCount] = useState(0);
+  const location = useLocation();
+  console.log(location);
 
   function handleIncrement() {
     setCount(count + 1);
@@ -19,10 +21,23 @@ function CollapsibleExample() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#about">About</Nav.Link>
-            <Link to="/projects" className="nav-link">
+            {location.pathname === "/projects" ? (
+              <Nav.Link href="/">Home</Nav.Link>
+            ) : (
+              <Nav.Link href="#about">About</Nav.Link>
+            )}
+            <NavLink
+              to="/projects"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending nav-link"
+                  : isActive
+                  ? "active nav-link"
+                  : "nav-link"
+              }
+            >
               Projects
-            </Link>
+            </NavLink>
             <NavDropdown title="Info" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Email</NavDropdown.Item>
               <NavDropdown.Divider />

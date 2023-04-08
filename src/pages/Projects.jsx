@@ -1,10 +1,11 @@
-import CardExample from "../components/Card";
 import gottaGo from "../assets/gottaGo.png";
 import digitalDiary from "../assets/digital-diary.jpg";
 import gameWatch from "../assets/gamewatch.jpg";
 import getFlix from "../assets/getflix.jpg";
 import astrozoders from "../assets/astrozoders.png";
 import employee from "../assets/employee.png";
+import Navbar from "../components/Navbar";
+import { Container, Row, Col } from "react-bootstrap";
 
 const Projects = () => {
   const projects = [
@@ -59,11 +60,45 @@ const Projects = () => {
   ];
 
   return (
-    <div>
+    <>
+      <Navbar />
       <h1>Projects I've Built</h1>
-
-      <CardExample />
-    </div>
+      <Container>
+        <Row>
+          {projects.map((project) => (
+            <Col key={project.title}>
+              <div className="card">
+                <img
+                  src={project.image}
+                  className="card-img-top"
+                  alt={project.title}
+                />
+                <div className="card-body">
+                  <h5 className="card-title">{project.title}</h5>
+                  <p className="card-text">{project.description}</p>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary"
+                  >
+                    Github
+                  </a>
+                  <a
+                    href="https://mrbriancrisp.com/Game-Watch/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary"
+                  >
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </>
   );
 };
 

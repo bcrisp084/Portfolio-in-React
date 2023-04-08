@@ -10,6 +10,7 @@ import {
 import "./index.css";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
+import Navbar from "./components/Navbar";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
