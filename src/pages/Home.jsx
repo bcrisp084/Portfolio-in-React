@@ -1,17 +1,15 @@
-import { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "./components/Navbar";
-import Container from "./components/Container";
-import RowExample from "./components/Row";
-import Col from "./components/Col";
-import Card from "./components/Card";
-import Image from "./components/Image";
+import Container from "../components/Container";
+import RowExample from "../components/Row";
+import Col from "../components/Col";
+import Card from "../components/Card";
+import Image from "../components/Image";
+import Navbar from "../components/Navbar";
 
-function App() {
+const Home = () => {
   return (
-    <div className="App">
+    <>
       <Navbar />
-      <Container>
+      <Container id={"main-content"} className={"main-container"}>
         <RowExample>
           <Col md={{ span: 4, offset: 0 }}>
             <h1 className="titles">Full Stack Engineer</h1>
@@ -33,8 +31,8 @@ function App() {
           </Col>
         </RowExample>
       </Container>
-      <Container>
-        <RowExample>
+      <Container className={"main-container"}>
+        <RowExample id={"about"}>
           <Col>
             <Card />
           </Col>
@@ -42,12 +40,12 @@ function App() {
             <Card />
           </Col>
           <Col>
-            <Image />
+            <Image src={"./src/assets/my-photo.jpg"} alt={"photo-of-brian"} />
           </Col>
         </RowExample>
       </Container>
-    </div>
+    </>
   );
-}
+};
 
-export default App;
+export default Home;

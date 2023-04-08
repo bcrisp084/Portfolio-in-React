@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Image() {
+export default function Image(props) {
   return (
     <div>
-      <img src="./src/assets/my-photo.jpg" alt="placeholder" />
+      <img src={props.src} alt={props.alt} />
     </div>
   );
 }

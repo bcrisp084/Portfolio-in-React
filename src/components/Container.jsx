@@ -1,11 +1,9 @@
 import Container from "react-bootstrap/Container";
-import Col from "react-bootstrap/Col";
-import CardExample from "./Card";
-import Image from "./Image";
 
 function ContainerFluidExample(props) {
+  console.log(props);
   return (
-    <Container id="main-container" fluid>
+    <Container className={props.className} id={props.id} fluid>
       {props.children}
     </Container>
   );
