@@ -3,6 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function CollapsibleExample() {
   const [count, setCount] = useState(0);
@@ -19,7 +20,9 @@ function CollapsibleExample() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#about">About</Nav.Link>
-            <Nav.Link href="#pricing">Projects</Nav.Link>
+            <Link to="/projects" className="nav-link">
+              Projects
+            </Link>
             <NavDropdown title="Info" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Email</NavDropdown.Item>
               <NavDropdown.Divider />

@@ -4,6 +4,7 @@ import Col from "../components/Col";
 import Card from "../components/Card";
 import Image from "../components/Image";
 import Navbar from "../components/Navbar";
+import myPhoto from "../assets/my-photo.jpg";
 
 const Home = () => {
   return (
@@ -40,7 +41,7 @@ const Home = () => {
             <Card />
           </Col>
           <Col>
-            <Image src={"./src/assets/my-photo.jpg"} alt={"photo-of-brian"} />
+            <Image src={myPhoto} alt={"photo-of-brian"} />
           </Col>
         </RowExample>
       </Container>
