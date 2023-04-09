@@ -7,7 +7,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import Resume from "../assets/docs/Resume.pdf";
 
 function CollapsibleExample() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(13);
   const location = useLocation();
   console.log(location);
 
