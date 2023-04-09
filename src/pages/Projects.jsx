@@ -3,7 +3,7 @@ import gameWatch from "../assets/gamewatch.jpg";
 import getFlix from "../assets/getflix.jpg";
 import astrozoders from "../assets/astrozoders.png";
 import employee from "../assets/employee.png";
-// import gottaGo from "../assets/gottaGo.png";
+import gottaGO from "../assets/gottaGO.png";
 import Navbar from "../components/Navbar";
 import RowExample from "../components/Row";
 import Col from "../components/Col";
@@ -23,7 +23,7 @@ const Projects = () => {
       title: "Gotta Go",
       description:
         "Gotta Go is a web application that allows users to search for public restrooms in their area. Users can search by city or zip code and are provided with a list of restrooms in the area. Users can also add restrooms to the database.",
-      // image: gottaGo,
+      image: gottaGO,
       github: "https://github.com/bcrisp084/gottaGO",
       url: "https://murmuring-dawn-63159.herokuapp.com/",
     },
