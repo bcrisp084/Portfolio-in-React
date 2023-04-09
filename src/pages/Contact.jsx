@@ -5,7 +5,7 @@ const Contact = () => {
     <>
       <Navbar />
       <form className="form">
-        <h2 className="conact-heading">CONTACT US</h2>
+        <h2 className="contact-heading">CONTACT ME</h2>
         <p type="Name:">
           <input placeholder="Write your name here.."></input>
         </p>
