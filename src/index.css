@@ -120,11 +120,92 @@ ul {
   text-decoration: underline 2px solid rgba(255, 255, 255, 0.584);
 }
 
-.intro h2 {
+.intro h2,
+.intro h3 {
   font-size: 2rem;
   color: white;
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 500;
   text-align: center;
   margin-top: 1rem;
+}
+
+.intro h3 {
+  font-size: 1.5rem;
+  color: white;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 1rem;
+  text-decoration: underline 2px solid rgba(255, 255, 255, 0.304);
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.project-card {
+  width: 500px;
+  height: 350px;
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.project-card h2 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  color: white;
+  font-size: 2rem;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  background-color: rgba(68, 68, 89, 0.5);
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.project-card:hover {
+  cursor: pointer;
+  filter: none;
+  transition: 0.3s ease;
+  box-shadow: 0 3px 20px #c4c8f1;
+}
+
+.project-card-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba(68, 68, 89, 0.5);
+}
+
+.project-card-body a {
+  color: rgb(240, 243, 246);
+  border-radius: 5px;
+  margin: 10px 10px 0 0;
+  font-size: 1.5rem;
+}
+
+.project-card-body a:hover {
+  color: rgb(42, 133, 212);
+  background-color: rgb(255, 255, 255);
 }

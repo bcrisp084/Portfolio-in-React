@@ -23,6 +23,7 @@ const Home = () => {
           <Col md={{ span: 6 }}>
             <div className="intro">
               <h1 className={"main-title"}>Hello, I'm Brian</h1>
+              <h3 className={"main-subtitle"}>I'm a</h3>
               {titles.map((title) => (
                 <ListGroup.Item className={"main-subtitle"} key={title}>
                   <h2>{title}</h2>

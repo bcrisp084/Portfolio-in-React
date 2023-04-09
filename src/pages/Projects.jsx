@@ -5,7 +5,9 @@ import getFlix from "../assets/getflix.jpg";
 import astrozoders from "../assets/astrozoders.png";
 import employee from "../assets/employee.png";
 import Navbar from "../components/Navbar";
-import { Container, Row, Col } from "react-bootstrap";
+import RowExample from "../components/Row";
+import Col from "../components/Col";
+import Container from "../components/Container";
 
 const Projects = () => {
   const projects = [
@@ -63,19 +65,18 @@ const Projects = () => {
     <>
       <Navbar />
       <h1>Projects I've Built</h1>
-      <Container>
-        <Row>
+      <Container className="projects">
+        <RowExample>
           {projects.map((project) => (
             <Col key={project.title}>
-              <div className="card">
+              <div className="project-card">
+                <h2>{project.title}</h2>
                 <img
                   src={project.image}
                   className="card-img-top"
                   alt={project.title}
                 />
-                <div className="card-body">
-                  <h5 className="card-title">{project.title}</h5>
-                  <p className="card-text">{project.description}</p>
+                <div className="project-card-body">
                   <a
                     href={project.github}
                     target="_blank"
@@ -85,7 +86,7 @@ const Projects = () => {
                     Github
                   </a>
                   <a
-                    href="https://mrbriancrisp.com/Game-Watch/"
+                    href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-primary"
@@ -96,7 +97,7 @@ const Projects = () => {
               </div>
             </Col>
           ))}
-        </Row>
+        </RowExample>
       </Container>
     </>
   );
