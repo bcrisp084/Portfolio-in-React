@@ -46,7 +46,9 @@ const Home = () => {
               recently earned a certificate in full stack web development from
               Johns Hopkins University. I am proficient in HTML, CSS,
               JavaScript, Node.js, Express.js, MySQL, MongoDB, and React.js. I
-              am currently seeking a position as a full stack web developer.
+              am currently seeking a position as a full stack web developer. I
+              am a proud father of three. I enjoy spending time with my family,
+              and builiding projects on the web.
             </p>
           </Col>
           <Col>
