@@ -209,3 +209,16 @@ ul {
   color: rgb(42, 133, 212);
   background-color: rgb(255, 255, 255);
 }
+
+@media screen and (max-width: 1090px) {
+  .project-card {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .project-card {
+    width: 300px;
+    height: 300px;
+  }
+}
