@@ -4,6 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import Resume from "../assets/docs/Resume.pdf";
 
 function CollapsibleExample() {
   const [count, setCount] = useState(0);
@@ -42,7 +43,9 @@ function CollapsibleExample() {
             <NavDropdown title="Info" id="collasible-nav-dropdown">
               <NavDropdown.Item href="/contact">Email</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.2">Resume</NavDropdown.Item>
+              <NavDropdown.Item href={Resume} download>
+                Resume
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
           {location.pathname === "/contact" ? (
