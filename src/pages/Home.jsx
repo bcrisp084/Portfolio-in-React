@@ -6,7 +6,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Image from "../components/Image";
 import Navbar from "../components/Navbar";
 import myPhoto from "../assets/my-photo.jpg";
-import Life from "../assets/life.jpg";
+import Life from "../assets/Life.jpg";
 
 const Home = () => {
   const titles = [
