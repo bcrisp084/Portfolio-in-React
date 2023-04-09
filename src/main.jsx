@@ -10,13 +10,14 @@ import {
 import "./index.css";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
-import Navbar from "./components/Navbar";
+import Errorpage from "./pages/404";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route exact path="/" element={<Home />} />
       <Route exact path="/projects" element={<Projects />} />
+      <Route path="*" element={<Errorpage />} />
     </>
   )
 );
