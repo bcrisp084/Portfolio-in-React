@@ -39,9 +39,10 @@ function CollapsibleExample() {
             >
               Projects
             </NavLink>
+            <NavLink to="/contact" className="nav-link">
+              Contact
+            </NavLink>
             <NavDropdown title="Info" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="/contact">Email me</NavDropdown.Item>
-              <NavDropdown.Divider />
               <NavDropdown.Item href={Resume} download>
                 Resume download
               </NavDropdown.Item>
