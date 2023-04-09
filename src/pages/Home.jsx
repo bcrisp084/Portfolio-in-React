@@ -5,12 +5,23 @@ import Card from "../components/Card";
 import Image from "../components/Image";
 import Navbar from "../components/Navbar";
 import myPhoto from "../assets/my-photo.jpg";
+import Life from "../assets/life.jpg";
 
 const Home = () => {
   return (
     <>
       <Navbar />
       <Container id={"main-content"} className={"main-container"}>
+        <RowExample>
+          <Col md={{ span: 6, offset: 5 }}>
+            <Image className={"myPhoto"} src={myPhoto} />
+          </Col>
+        </RowExample>
+        <Image className={"life-img"} src={Life} />
+        <RowExample>
+          <Col md={{ span: 6, offset: 3 }}></Col>
+        </RowExample>
+
         <RowExample>
           <Col md={{ span: 4, offset: 0 }}>
             <h1 className="titles">Full Stack Engineer</h1>
@@ -39,9 +50,6 @@ const Home = () => {
           </Col>
           <Col>
             <Card />
-          </Col>
-          <Col>
-            <Image src={myPhoto} alt={"photo-of-brian"} />
           </Col>
         </RowExample>
       </Container>
