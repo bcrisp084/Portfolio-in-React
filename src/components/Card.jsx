@@ -1,11 +1,11 @@
 import Card from "react-bootstrap/Card";
 import Placeholder from "react-bootstrap/Placeholder";
 
-function CardExample(props) {
+function CardExample() {
   return (
     <div className="d-flex justify-content-around">
       <Card style={{ width: "24rem" }}>
-        <Card.Img variant="top" src={props.src} />
+        <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>
           <Placeholder as={Card.Title} animation="glow">
             <Placeholder xs={6} />

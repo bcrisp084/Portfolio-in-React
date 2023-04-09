@@ -30,6 +30,7 @@ ul {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  position: relative;
 }
 
 .likes-count {
@@ -47,7 +48,8 @@ ul {
   width: 100%;
 }
 
-.life-img {
+.life-img,
+.my-photo {
   position: absolute;
   z-index: -1;
   top: 0;
@@ -59,14 +61,16 @@ ul {
   opacity: 0.5;
 }
 
-.life-img img {
+.life-img img,
+.my-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-.life-img::before {
+.life-img::before,
+.my-photo::before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -78,7 +82,8 @@ ul {
   opacity: 0.5;
 }
 
-.life-img::after {
+.life-img::after,
+.my-photo::after {
   content: "";
   position: absolute;
   z-index: 2;
@@ -91,4 +96,35 @@ ul {
     rgba(27, 27, 41, 0.5),
     rgba(27, 27, 41, 0.5)
   );
+}
+
+.intro {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro h1 {
+  font-size: 4rem;
+  color: white;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: underline 2px solid rgba(255, 255, 255, 0.584);
+}
+
+.intro h2 {
+  font-size: 2rem;
+  color: white;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 1rem;
 }
