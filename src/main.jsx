@@ -10,16 +10,16 @@ import {
 import "./index.css";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
-import Errorpage from "./pages/404";
 import Contact from "./pages/Contact";
+import Errorpage from "./pages/404";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route exact path="/" element={<Home />} />
-      <Route exact path="/projects" element={<Projects />} />
-      <Route exact path="/contact" element={<Contact />} />
-      <Route path="*" element={<Errorpage />} />
+      <Route exact path="projects" element={<Projects />} />
+      <Route exact path="contact" element={<Contact />} />
+      <Route path="*" errorElement={<Errorpage />} />
     </>
   )
 );

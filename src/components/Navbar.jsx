@@ -9,7 +9,6 @@ import Resume from "../assets/docs/Resume.pdf";
 function CollapsibleExample() {
   const [count, setCount] = useState(13);
   const location = useLocation();
-  console.log(location);
 
   function handleIncrement() {
     setCount(count + 1);
