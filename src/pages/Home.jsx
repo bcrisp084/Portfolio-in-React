@@ -58,7 +58,6 @@ const Home = () => {
                 <tr>
                   <th scope="col">Front End</th>
                   <th scope="col">Back End</th>
-                  <th scope="col">Other</th>
                   <th scope="col">Database</th>
                 </tr>
               </thead>
@@ -66,37 +65,31 @@ const Home = () => {
                 <tr>
                   <td>HTML</td>
                   <td>Node.js</td>
-                  <td>Git</td>
                   <td>MySQL</td>
                 </tr>
                 <tr>
                   <td>CSS</td>
                   <td>Express.js</td>
-                  <td>GitHub</td>
                   <td>MongoDB</td>
                 </tr>
                 <tr>
                   <td>JavaScript</td>
                   <td>Handlebars.js</td>
-                  <td>Heroku</td>
                   <td>IndexedDB</td>
                 </tr>
                 <tr>
                   <td>React.js</td>
                   <td>REST</td>
-                  <td>VS Code</td>
                   <td>GraphQL</td>
                 </tr>
                 <tr>
                   <td>Bootstrap</td>
                   <td>APIs</td>
-                  <td>Postman</td>
                   <td>Sequelize</td>
                 </tr>
                 <tr>
                   <td>jQuery</td>
                   <td>JSON</td>
-                  <td>Slack</td>
                   <td>Mongoose</td>
                 </tr>
               </tbody>

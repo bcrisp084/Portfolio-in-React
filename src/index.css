@@ -214,7 +214,7 @@ ul {
 
 .skills-table {
   width: 100%;
-  max-width: 1000px;
+  /* max-width: 1000px; */
   padding: 0 1rem;
   margin: 0 auto;
   color: white;
@@ -401,6 +401,7 @@ button:hover {
   }
 
   .skills-table {
+    width:  ;
     font-size: 1.2rem;
     line-height: 1.8rem;
   }
