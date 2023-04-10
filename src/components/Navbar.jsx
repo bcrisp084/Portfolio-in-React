@@ -70,6 +70,22 @@ function CollapsibleExample() {
               </Nav>
             </>
           )}
+          <div className="social-links">
+            <a
+              href="https://github.com/bcrisp084?tab=repositories"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/brian-crisp-265a39204/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i className="fab fa-linkedin"></i>
+            </a>
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

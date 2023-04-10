@@ -81,6 +81,16 @@ ul {
   text-align: center;
 }
 
+.social-links a {
+  color: white;
+  font-size: 2rem;
+  margin: 0 1rem;
+}
+
+.social-links a:hover {
+  color: rgba(251, 251, 251, 0.457);
+}
+
 .row {
   width: 100%;
 }
@@ -401,7 +411,7 @@ button:hover {
   }
 
   .skills-table {
-    width:  ;
+    width: ;
     font-size: 1.2rem;
     line-height: 1.8rem;
   }
