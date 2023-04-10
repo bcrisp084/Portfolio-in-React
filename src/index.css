@@ -187,7 +187,8 @@ ul {
   text-decoration: underline 2px solid rgba(255, 255, 255, 0.304);
 }
 
-.about-section {
+.about-section,
+.table-heading {
   color: black;
   text-decoration: underline 2px solid rgba(255, 255, 255, 0.304);
   text-shadow: 0 0 3px #f6f5f5, 0 0 5px #9b9b9b, 0 0 10px #bababa;
@@ -213,14 +214,14 @@ ul {
   text-align: center;
 }
 
-.table-heading {
+/* .table-heading {
   color: white;
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 800;
   text-align: center;
   text-decoration: underline 2px solid rgba(255, 255, 255, 0.304);
   margin-top: 2rem;
-}
+} */
 
 .skills-table {
   width: 100%;
