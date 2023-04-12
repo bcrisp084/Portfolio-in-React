@@ -7,7 +7,7 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
-import "./index.css";
+import "./index.scss";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";

@@ -68,15 +68,24 @@ const Projects = () => {
       <Container className="projects">
         <RowExample>
           {projects.map((project) => (
-            <Col key={project.title}>
-              <div className="project-card">
-                <h2>{project.title}</h2>
-                <img
-                  src={project.image}
-                  className="card-img-top"
-                  alt={project.title}
-                />
-                <div className="project-card-body">
+            <div key={project.title} className="flex">
+              <div className="block">
+                <a
+                  href="#0"
+                  className="toggle"
+                  onClick={() => {
+                    document
+                      .querySelector(".block")
+                      .classList.toggle("expanded");
+                    document
+                      .querySelector(".content")
+                      .classList.toggle("display");
+                  }}
+                ></a>
+                <div className="smallblockcontent">Click me</div>
+                <div className="content">
+                  <h2>{Projects.title}</h2>
+                  <p>{project.description}</p>
                   <a
                     href={project.github}
                     target="_blank"
@@ -95,8 +104,38 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
-            </Col>
+            </div>
           ))}
+          {/* {projects.map((project) => (
+            <Col key={project.title}>
+              <div className="project-card"> */}
+          {/* <h2>{project.title}</h2> */}
+          {/* <img
+                  src={project.image}
+                  className="card-img-top"
+                  alt={project.title}
+                /> */}
+          {/* <div className="project-card-body">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary"
+                  >
+                    Github
+                  </a>
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary"
+                  >
+                    Live Demo
+                  </a>
+                </div> */}
+          {/* </div>
+            </Col>
+          ))} */}
         </RowExample>
       </Container>
     </>

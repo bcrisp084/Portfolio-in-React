@@ -76,7 +76,7 @@ function CollapsibleExample() {
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fa-brands fa-github"></i>
+              <i className="fa-brands fa-github"></i>
             </a>
             <a
               href="https://www.linkedin.com/in/brian-crisp-265a39204/"
