@@ -8,8 +8,15 @@ import Navbar from "../components/Navbar";
 import RowExample from "../components/Row";
 import Col from "../components/Col";
 import Container from "../components/Container";
+import { useState } from "react";
 
 const Projects = () => {
+  const [isExpanded, setExpanded] = useState(false);
+
+  const toggle = () => {
+    setExpanded(!isExpanded);
+  };
+
   const projects = [
     {
       title: "Digital Diary",
@@ -64,33 +71,27 @@ const Projects = () => {
   return (
     <>
       <Navbar />
-      <h1>Projects I've Built</h1>
+      <h1 className="projects-title">Projects I've Built</h1>
       <Container className="projects">
         <RowExample>
           {projects.map((project) => (
             <div key={project.title} className="flex">
-              <div className="block">
-                <a
-                  href="#0"
-                  className="toggle"
-                  onClick={() => {
-                    document
-                      .querySelector(".block")
-                      .classList.toggle("expanded");
-                    document
-                      .querySelector(".content")
-                      .classList.toggle("display");
-                  }}
-                ></a>
+              <div className={isExpanded ? "expanded" : "block"}>
+                <a href="#0" className="toggle" onClick={toggle}></a>
                 <div className="smallblockcontent">Click me</div>
-                <div className="content">
-                  <h2>{Projects.title}</h2>
-                  <p>{project.description}</p>
+                <div className={isExpanded ? "display" : "content"}>
+                  <h2>{project.title}</h2>
+                  <img
+                    src={project.image}
+                    className="card-img-top"
+                    alt={project.title}
+                  />
+                  <p className="description">{project.description}</p>
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-primary"
+                    className="btn btn-primary live-links"
                   >
                     Github
                   </a>
@@ -98,7 +99,7 @@ const Projects = () => {
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-primary"
+                    className="btn btn-primary live-links"
                   >
                     Live Demo
                   </a>

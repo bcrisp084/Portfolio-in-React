@@ -1,17 +1,61 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=M+PLUS+Rounded+1c&family=Nabla&display=swap");
-* {
-  margin: 0;
-  padding: 0;
+$font: "Source Sans Pro", sans-serif;
+$primary: #644cad;
+$secondary: #4426a8;
+$shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 body {
   background-color: rgb(27, 27, 41);
   font-family: "M PLUS Rounded 1c", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: 3rem;
+  color: white;
+  text-align: center;
+}
+
+P {
+  font-size: 1.5rem;
   color: white;
   text-align: center;
 }
@@ -214,15 +258,6 @@ ul {
   text-align: center;
 }
 
-/* .table-heading {
-  color: white;
-  font-family: "M PLUS Rounded 1c", sans-serif;
-  font-weight: 800;
-  text-align: center;
-  text-decoration: underline 2px solid rgba(255, 255, 255, 0.304);
-  margin-top: 2rem;
-} */
-
 .skills-table {
   width: 100%;
   /* max-width: 1000px; */
@@ -257,65 +292,41 @@ h2 {
   font-weight: 400;
 }
 
-.flex {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.card-img-top {
+  width: 100%;
+  height: 50vw;
+  object-fit: cover;
+  object-position: center;
 }
 
-.block {
-  height: 200px;
-  width: 200px;
-  color: #fff;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+.description {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2.5rem;
   text-align: center;
-  line-height: 200px;
-  font-size: 18px;
-  position: relative;
-  background-color: blue;
-  box-shadow: solid 1px rgba(0, 0, 0, 0.1);
-  transition: 0.3s all ease;
-  .smallblockcontent {
-    opacity: 0;
-    -webkit-animation: fadein 2s forwards;
-    animation: fadein 2s forwards;
-    animation-delay: 0.5s;
-  }
-  & .expanded {
-    transition: 0.3s all ease;
-    width: 800px;
-    height: 400px;
-    padding: 40px;
-    line-height: normal;
-    background: #644cad;
-    background: -moz-linear-gradient(left, #644cad 0%, #4426a8 100%);
-    background: -webkit-linear-gradient(left, #644cad 0%, #4426a8 100%);
-    background: linear-gradient(to right, #644cad 0%, #4426a8 100%);
-    .smallblockcontent {
-      display: none;
-    }
-  }
-  .content {
-    text-align: left;
-    display: none;
-    opacity: 0;
-    &.display {
-      -webkit-animation: fadein 2s forwards;
-      animation: fadein 2s forwards;
-      animation-delay: 0.5s;
-      display: block;
-    }
-  }
-  a {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-  }
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.projects-title {
+  color: black;
+  text-decoration: underline 2px solid rgba(255, 255, 255, 0.304);
+  text-shadow: 0 0 3px #f6f5f5, 0 0 5px #9b9b9b, 0 0 10px #bababa;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.live-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 2rem;
 }
 
 .form {
@@ -323,7 +334,7 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 340px;
+  width: 400px;
   height: 480px;
   background: #e6e6e6;
   border-radius: 8px;
@@ -335,9 +346,14 @@ h2 {
 .contact-heading {
   margin: 10px 0;
   padding-bottom: 10px;
-  width: 180px;
+  white-space: nowrap;
+  width: 280px;
   color: #4d4d51;
   border-bottom: 3px solid #78788c;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 auto;
 }
 input {
   width: 100%;
