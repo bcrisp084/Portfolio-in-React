@@ -12,9 +12,10 @@ import Card from "react-bootstrap/Card";
 const Home = () => {
   const titles = [
     "Full Stack Developer",
-    "Teaching Assitant",
+    "Teaching Assistant",
     "Automotive Technician",
     "Devout Father",
+    "Central Grader",
   ];
   return (
     <>
