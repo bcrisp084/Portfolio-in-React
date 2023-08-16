@@ -86,6 +86,7 @@ function CollapsibleExample() {
               <i className="fab fa-linkedin"></i>
             </a>
           </div>
+          <script src="https://www.w3counter.com/tracker.js?id=150025"></script>
         </Navbar.Collapse>
       </Container>
     </Navbar>
