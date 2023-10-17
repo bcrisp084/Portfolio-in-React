@@ -1,13 +1,12 @@
 import Container from "../components/Container";
 import RowExample from "../components/Row";
 import Col from "../components/Col";
-// import Card from "../components/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import Image from "../components/Image";
 import Navbar from "../components/Navbar";
 import myPhoto from "../assets/my-photo.jpg";
 import Life from "../assets/Life.jpg";
-import Card from "react-bootstrap/Card";
+import { TypeAnimation } from "react-type-animation";
 
 const Home = () => {
   const titles = [
@@ -25,12 +24,31 @@ const Home = () => {
           <Col md={{ span: 6 }}>
             <div className="intro">
               <h1 className={"main-title"}>Hello, I'm Brian</h1>
-              <h3 className={"main-subtitle"}>I'm a</h3>
-              {titles.map((title) => (
+              <h3 className="main-subtitle">
+                <TypeAnimation
+                  sequence={[
+                    "I am a Full Stack Developer",
+                    2000,
+                    "I am a Teaching Assistant",
+                    2000,
+                    "I am an Automotive Technician",
+                    2000,
+                    "I am a Devout Father",
+                    2000,
+                    "I am a Central Grader",
+                    2000,
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  style={{ fontSize: "2em", display: "inline-block" }}
+                  repeat={Infinity}
+                />
+              </h3>
+              {/* {titles.map((title) => (
                 <ListGroup.Item className={"main-subtitle"} key={title}>
                   <h2>{title}</h2>
                 </ListGroup.Item>
-              ))}
+              ))} */}
             </div>
           </Col>
           <Col md={{ span: 6 }}></Col>

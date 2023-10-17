@@ -9,7 +9,6 @@ import RowExample from "../components/Row";
 import Col from "../components/Col";
 import Container from "../components/Container";
 import { useState } from "react";
-
 const Projects = () => {
   const [isExpanded, setExpanded] = useState(false);
 
@@ -72,9 +71,10 @@ const Projects = () => {
     <>
       <Navbar />
       <h1 className="projects-title">Projects I've Built</h1>
+
       <Container className="projects">
         <RowExample>
-          {projects.map((project) => (
+          {/* {projects.map((project) => (
             <div key={project.title} className="flex">
               <div className={isExpanded ? "expanded" : "block"}>
                 <a href="#0" className="toggle" onClick={toggle}></a>
@@ -106,36 +106,6 @@ const Projects = () => {
                 </div>
               </div>
             </div>
-          ))}
-          {/* {projects.map((project) => (
-            <Col key={project.title}>
-              <div className="project-card"> */}
-          {/* <h2>{project.title}</h2> */}
-          {/* <img
-                  src={project.image}
-                  className="card-img-top"
-                  alt={project.title}
-                /> */}
-          {/* <div className="project-card-body">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-primary"
-                  >
-                    Github
-                  </a>
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-primary"
-                  >
-                    Live Demo
-                  </a>
-                </div> */}
-          {/* </div>
-            </Col>
           ))} */}
         </RowExample>
       </Container>
